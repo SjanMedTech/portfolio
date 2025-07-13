@@ -1,4 +1,4 @@
-/* Reset basic styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,43 +6,62 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f6f9fc;
+  color: #2b2d42;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
   padding: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
 h1 {
-  font-size: 2.5em;
-  color: #2e6ef7;
+  color: #0052cc;
+  font-size: 2.6em;
   margin-bottom: 10px;
 }
 
 h2 {
+  color: #333;
+  border-bottom: 2px solid #d0d0d0;
+  padding-bottom: 6px;
   margin-top: 40px;
-  color: #444;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  font-size: 1.4em;
 }
 
 p {
-  margin: 10px 0;
+  font-size: 1.05em;
+  margin: 10px 0 20px;
 }
 
 ul {
-  margin: 10px 0 30px 20px;
+  list-style-type: square;
+  margin-left: 25px;
+  margin-bottom: 25px;
 }
 
 li {
   margin-bottom: 8px;
+  font-size: 1.02em;
 }
 
 a {
-  color: #2e6ef7;
+  color: #1a73e8;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+  color: #172b4d;
+}
+
+/* Section spacing for mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
 }
