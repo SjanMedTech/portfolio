@@ -7,18 +7,30 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f6f9fc;
+  background: linear-gradient(to bottom right, #f7faff, #e1f0fb); /* light clean gradient */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #2b2d42;
-  line-height: 1.6;
+  line-height: 1.7;
   padding: 40px;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.08);
+}
+
+/* Headings */
 h1 {
   color: #0052cc;
   font-size: 2.6em;
   margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 h2 {
@@ -29,11 +41,13 @@ h2 {
   font-size: 1.4em;
 }
 
+/* Paragraphs */
 p {
-  font-size: 1.05em;
-  margin: 10px 0 20px;
+  font-size: 1.08em;
+  margin: 12px 0 24px;
 }
 
+/* Lists */
 ul {
   list-style-type: square;
   margin-left: 25px;
@@ -42,26 +56,41 @@ ul {
 
 li {
   margin-bottom: 8px;
-  font-size: 1.02em;
+  font-size: 1.04em;
 }
 
+/* Links */
 a {
   color: #1a73e8;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Text emphasis */
 strong {
   font-weight: 600;
   color: #172b4d;
 }
 
-/* Section spacing for mobile */
+/* Optional footer style */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #7a7a7a;
+}
+
+/* Responsive layout */
 @media (max-width: 768px) {
   body {
     padding: 20px;
+  }
+
+  .content-wrapper {
+    padding: 25px;
   }
 }
