@@ -63,8 +63,8 @@
         <li>High accuracy achieved in tumor detection.</li>
         <li>Reduced manual annotation effort for clinicians.</li>
       </ul>
-      <img src="path_to_image1.png" alt="Original MRI">
-      <img src="path_to_image2.png" alt="Segmented Tumor">
+     <!-- <img src="path_to_image1.png" alt="Original MRI">
+      <img src="path_to_image2.png" alt="Segmented Tumor">-->
     </div>
   </section>
 
@@ -103,7 +103,7 @@
         <li>Smart orthotic system developed.</li>
         <li>High-risk areas for ulcers successfully predicted.</li>
       </ul>
-      <img src="path_to_image1.png" alt="3D Orthotic">
+      <!--<img src="path_to_image1.png" alt="3D Orthotic">-->
     </div>
   </section>
 
@@ -161,12 +161,23 @@ function showSlide(index) {
   setTimeout(() => slides[index].style.opacity = "1", 50);
   slides[index].style.zIndex = "1";
   currentSlide = index;
+
+  // Scroll to top whenever a new slide is shown
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 showSlide(0);
+
+function nextSlide() {
+  let next = currentSlide + 1;
+  if (next >= slides.length) next = 0; // loop back
+  showSlide(next);
+}
 
 function goToSlide(index) {
   showSlide(index);
 }
+
 </script>
 
 </body>
