@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  font-family: 'Orbitron', Arial, sans-serif;
-  background: black;
+  font-family: 'Arial', sans-serif;
+  background: #ffffff; /* bright white */
   overflow: hidden;
-  color: #00ffe5;
+  color: #222; /* default text color */
 }
+
 
 .slideshow-container {
   position: relative;
@@ -19,14 +20,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #111;
-  justify-content: center;
+  background: #f9f9f9;   /* brighter background */
+  color: #222;           /* darker text for readability */
+  justify-content: flex-start; /* align to top */
   align-items: center;
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px;
+  overflow-y: auto; /* allows scrolling if content is large */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
 
 .slide.active {
   display: flex;
@@ -110,3 +114,25 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* Internship slide sidebar layout */
+#internships .center {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#internships .sidebar {
+  width: 25%;
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#internships .content {
+  width: 70%;
+}
+
+
