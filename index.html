@@ -8,136 +8,113 @@
 </head>
 <body>
 
-<!-- Sidebar Navigation -->
-<nav class="sidebar">
-  <ul>
-    <li onclick="goToSlide(0)">Welcome</li>
-    <li onclick="goToSlide(1)">Summary</li>
-    <li onclick="goToSlide(2)">Project 1</li>
-    <li onclick="goToSlide(3)">Project 2</li>
-    <li onclick="goToSlide(4)">Project 3</li>
-    <li onclick="goToSlide(5)">Internships</li>
-    <li onclick="goToSlide(6)">Contact</li>
-  </ul>
-</nav>
-
-<!-- Slideshow Container -->
 <div class="slideshow-container">
 
   <!-- Slide 1: Welcome -->
-  <section class="slide active">
+  <section class="slide active" id="welcome">
     <div class="center">
-      <h1>Welcome to my Portfolio</h1>
-      <p>Hi, I'm <strong>Shanjana Ramesh</strong></p>
+      <h1 id="welcomeText" class="hidden-text">Welcome to my Portfolio</h1>
+      <p id="introText" class="hidden-text">Hi, I'm <b>Shanjana Ramesh</b></p>
+      <button id="welcomeBtn" class="hidden-text" onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 2: Summary -->
   <section class="slide">
-    <div class="center card">
+    <div class="center">
       <h2>Professional Summary</h2>
       <p>
         Highly motivated final-year Biomedical Engineering student with a keen interest in healthcare innovation 
-        and clinical research. Experienced in hospital and industrial environments, with exposure to medical device development, IoT, AI, and pharmaceutical manufacturing processes. 
+        and clinical research. Experienced in both hospital and industrial environments, with exposure to 
+        medical device development and pharmaceutical manufacturing processes. 
         Committed to contributing to advancements in healthcare and improving patient outcomes.
       </p>
+      <button onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 3: Project 1 -->
   <section class="slide">
-    <div class="center card">
-      <h3>1. Brain Tumor Segmentation (YOLOv8)</h3>
-      <p><strong>Aim:</strong> Detect and segment brain tumors from MRI images.</p>
-      <p><strong>Objective:</strong> Assist radiologists in early diagnosis.</p>
-      <p><strong>Skills Used:</strong> Python, Deep Learning, Image Processing</p>
-      <p><strong>Software Used:</strong> Python, YOLOv8, TensorFlow, OpenCV</p>
-      <ol>
+    <div class="center">
+      <h2>1. Brain Tumor Segmentation (YOLOv8)</h2>
+      <p><b>Aim:</b> Detect and segment brain tumors from MRI images.</p>
+      <p><b>Objective:</b> Assist radiologists in early diagnosis.</p>
+      <p><b>Skills Used:</b> Python, Deep Learning, Image Processing</p>
+      <p><b>Software Used:</b> Python, YOLOv8, TensorFlow, OpenCV</p>
+      <ul>
         <li>Collected and preprocessed MRI datasets.</li>
         <li>Implemented YOLOv8 for tumor detection.</li>
         <li>Data augmentation and fine-tuning.</li>
         <li>Refined segmentation using OpenCV.</li>
         <li>Evaluated performance with Dice, Precision, Recall.</li>
-      </ol>
-      <ul>
-        <li>High accuracy achieved in tumor detection.</li>
-        <li>Reduced manual annotation effort for clinicians.</li>
       </ul>
-     <!-- <img src="path_to_image1.png" alt="Original MRI">
-      <img src="path_to_image2.png" alt="Segmented Tumor">-->
+      <p>✅ High accuracy in tumor detection. <br> ✅ Reduced manual annotation effort for clinicians.</p>
+      <button onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 4: Project 2 -->
   <section class="slide">
-    <div class="center card">
-      <h3>2. Cardiac Time Intervals using SCG</h3>
-      <p><strong>Aim:</strong> Extract cardiac intervals from SCG signals to detect dysfunction.</p>
-      <ol>
+    <div class="center">
+      <h2>2. Cardiac Time Intervals using SCG</h2>
+      <p><b>Aim:</b> Extract cardiac intervals from SCG signals to detect dysfunction.</p>
+      <ul>
         <li>Collected SCG signals from subjects.</li>
         <li>Preprocessed signals using filters.</li>
         <li>Extracted key intervals.</li>
         <li>Analyzed patterns in Python and MATLAB.</li>
         <li>Visualized waveforms with Matplotlib.</li>
-      </ol>
-      <ul>
-        <li>Successfully extracted cardiac time intervals.</li>
-        <li>Enabled differentiation between normal and abnormal patterns.</li>
       </ul>
+      <p>✅ Successfully extracted cardiac time intervals. <br> ✅ Enabled differentiation between normal and abnormal patterns.</p>
+      <button onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 5: Project 3 -->
   <section class="slide">
-    <div class="center card">
-      <h3>3. 3D-Printed Orthotics for Diabetic Foot Care</h3>
-      <p><strong>Aim:</strong> Develop 3D-printed orthotics with sensors for ulcer prediction.</p>
-      <ol>
+    <div class="center">
+      <h2>3. 3D-Printed Orthotics for Diabetic Foot Care</h2>
+      <p><b>Aim:</b> Develop 3D-printed orthotics with sensors for ulcer prediction.</p>
+      <ul>
         <li>Designed patient-specific orthotics.</li>
         <li>Embedded sensors for real-time monitoring.</li>
         <li>Collected and analyzed data.</li>
         <li>Trained AI models to predict ulcer risk.</li>
         <li>Optimized orthotic design.</li>
-      </ol>
-      <ul>
-        <li>Smart orthotic system developed.</li>
-        <li>High-risk areas for ulcers successfully predicted.</li>
       </ul>
-      <!--<img src="path_to_image1.png" alt="3D Orthotic">-->
+      <p>✅ Smart orthotic system developed. <br> ✅ High-risk areas for ulcers successfully predicted.</p>
+      <button onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 6: Internships -->
   <section class="slide">
-    <div class="center card">
+    <div class="center">
       <h2>Internship Experience</h2>
-      <section>
-        <h3>Softgel Healthcare Pvt. Ltd.</h3>
-        <p>Hands-on pharmaceutical manufacturing experience focusing on GMP, SOPs, and quality control workflows. Assisted in laboratory operations, sample analysis, and regulatory compliance.</p>
-      </section>
-      <section>
-        <h3>Evolve Robot Labs</h3>
-        <p>Worked on IoT-based wearable health monitoring, implementing TinyML for edge devices. Gained skills in hardware-software co-design and remote healthcare monitoring.</p>
-      </section>
-      <section>
-        <h3>Medsby Healthcare</h3>
-        <p>3D-printed patient-specific orthotics using DICOM data. Contributed to CAD modeling, biomechanical analysis, and prototype validation for personalized healthcare.</p>
-      </section>
-      <section>
-        <h3>Lifeline Hospitals & Healia Diagnostic Centre</h3>
-        <p>Assisted in clinical workflows, sample collection, analysis, and data entry. Gained exposure to patient diagnostics, laboratory operations, and hospital protocols.</p>
-      </section>
+      <div class="card"><b>Softgel Healthcare Pvt. Ltd.</b><br>
+        Hands-on pharmaceutical manufacturing experience focusing on GMP, SOPs, and quality control workflows. Assisted in laboratory operations, sample analysis, and regulatory compliance.
+      </div>
+      <div class="card"><b>Evolve Robot Labs</b><br>
+        Worked on IoT-based wearable health monitoring, implementing TinyML for edge devices. Gained skills in hardware-software co-design and remote healthcare monitoring.
+      </div>
+      <div class="card"><b>Medsby Healthcare</b><br>
+        3D-printed patient-specific orthotics using DICOM data. Contributed to CAD modeling, biomechanical analysis, and prototype validation for personalized healthcare.
+      </div>
+      <div class="card"><b>Lifeline Hospitals & Healia Diagnostic Centre</b><br>
+        Assisted in clinical workflows, sample collection, analysis, and data entry. Gained exposure to patient diagnostics, laboratory operations, and hospital protocols.
+      </div>
+      <button onclick="nextSlide()">Next</button>
     </div>
   </section>
 
   <!-- Slide 7: Contact -->
   <section class="slide">
-    <div class="center card">
+    <div class="center">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:sr4120@srmist.edu.in">sr4120@srmist.edu.in</a></p>
       <p>GitHub: <a href="https://github.com/SjanMedTech" target="_blank">github.com/SjanMedTech</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/shanjana-ramesh-256970283" target="_blank">Shanjana Ramesh</a></p>
       <p>Phone: +91 6380337276</p>
+      <button onclick="goToSlide(0)">Back to Start</button>
     </div>
   </section>
 
@@ -148,35 +125,48 @@
 </footer>
 
 <script>
-const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
-    slide.style.opacity = "0";
-    slide.style.zIndex = "0";
-    slide.style.display = "none";
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
   });
-  slides[index].style.display = "block";
-  setTimeout(() => slides[index].style.opacity = "1", 50);
-  slides[index].style.zIndex = "1";
   currentSlide = index;
-
-  // Scroll to top whenever a new slide is shown
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-showSlide(0);
 
 function nextSlide() {
   let next = currentSlide + 1;
-  if (next >= slides.length) next = 0; // loop back
+  if (next >= slides.length) next = 0;
   showSlide(next);
 }
 
-function goToSlide(index) {
-  showSlide(index);
+function prevSlide() {
+  let prev = currentSlide - 1;
+  if (prev < 0) prev = slides.length - 1;
+  showSlide(prev);
 }
+
+function goToSlide(n) {
+  showSlide(n);
+}
+
+// Keyboard navigation
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    nextSlide();
+  } else if (event.key === "ArrowLeft") {
+    prevSlide();
+  }
+});
+
+// Welcome animation
+window.onload = () => {
+  setTimeout(() => document.getElementById("welcomeText").classList.add("show"), 5000);
+  setTimeout(() => document.getElementById("introText").classList.add("show"), 7000);
+  setTimeout(() => document.getElementById("welcomeBtn").classList.add("show"), 9000);
+};
 
 </script>
 
